@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jelly Gel Taste Test</title>
+<meta name="description" content="Eight Veloforte jelly gel flavours, tasted and scored, with notes on format, range strategy and go-to-market.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arima:wght@200;300;400;500&family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,600;0,6..12,700;1,6..12,300&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#ffffff; --bg-soft:#f7f6f2; --ink:#0b0b0b; --ink-2:#3d4650; --muted:#546b7d; --line:#e6e3dc;
+  --card:#ffffff; --chip:#f2f0ea; --btn:#0b0b0b; --btn-ink:#ffffff;
+  --lg1:#F2C230; --lg1-2:#E08A2C; --orange:#FF8A1F; --orange-2:#FFB347;
+  --vanilla:#F6B8CF; --vanilla-2:#FFF3E2; --grapefruit:#FF5A72; --grapefruit-2:#FFB199;
+  --lemon:#FFE03A; --lemon-2:#FFF39A; --lime:#7CCB3A; --lime-2:#C6EE6B;
+  --lg2:#E9A12E; --lg2-2:#C9651C; --mint:#2FD3A9; --mint-2:#A8F0DA;
+  --yes:#1f8a4c; --maybe:#b07a12; --no:#c0392b;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#111213; --bg-soft:#191b1d; --ink:#f4f2ee; --ink-2:#c9cdd2; --muted:#9fb2c1; --line:#2b2e31;
+    --card:#17191b; --chip:#232629; --btn:#f4f2ee; --btn-ink:#111213;
+    --yes:#4cc47f; --maybe:#e0aa3e; --no:#ef6f61;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#111213; --bg-soft:#191b1d; --ink:#f4f2ee; --ink-2:#c9cdd2; --muted:#9fb2c1; --line:#2b2e31;
+  --card:#17191b; --chip:#232629; --btn:#f4f2ee; --btn-ink:#111213;
+  --yes:#4cc47f; --maybe:#e0aa3e; --no:#ef6f61;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Nunito Sans",system-ui,sans-serif;font-weight:300;font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{font-family:"Arima",Georgia,serif;font-weight:300;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em}
+strong{font-weight:700}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+@media (max-width:640px){.wrap{padding:0 16px}}
+
+/* top bar + header, echoing veloforte.com */
+.topbar{background:#0b0b0b;color:#fff;font-size:12px;text-align:center;padding:7px 16px;letter-spacing:.04em}
+.topbar span{border-bottom:1px solid rgba(255,255,255,.5)}
+header.site{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;flex-direction:column;line-height:1;text-decoration:none}
+.logo b{font-family:"Arima",serif;font-weight:500;font-size:30px;font-style:italic;letter-spacing:-.02em;transform:skewX(-8deg);display:inline-block}
+.logo small{font-size:9px;letter-spacing:.08em;color:var(--muted);margin-left:46px;margin-top:2px}
+nav.jump{display:flex;gap:22px;font-size:13px;text-transform:uppercase;letter-spacing:.05em}
+nav.jump a{text-decoration:none;color:var(--ink-2)}
+nav.jump a:hover{color:var(--ink)}
+@media (max-width:820px){nav.jump{display:none}}
+.theme-btn{border:1px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-size:13px;padding:6px 12px;cursor:pointer}
+
+/* hero */
+.hero{position:relative;overflow:hidden;padding:88px 0 72px}
+.hero .blobs{position:absolute;inset:0;pointer-events:none}
+.hero .blobs i{position:absolute;border-radius:50%;filter:blur(2px);opacity:.9}
+.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);font-weight:600}
+.hero h1{font-size:clamp(46px,7.4vw,96px);margin:18px 0 26px;max-width:11ch;position:relative}
+.hero .lede{font-size:clamp(18px,2vw,21px);max-width:58ch;color:var(--ink-2);position:relative}
+.meta{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;position:relative}
+.meta span{background:var(--chip);padding:6px 12px;font-size:13px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:64px;position:relative;background:var(--bg)}
+.stats div{padding:26px 22px;border-right:1px solid var(--line)}
+.stats div:last-child{border-right:0}
+.stats b{display:block;font-family:"Arima",serif;font-weight:300;font-size:clamp(34px,4.4vw,54px);line-height:1}
+.stats span{font-size:14px;color:var(--muted)}
+@media (max-width:760px){.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}}
+
+section{padding:88px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:40px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(36px,4.6vw,58px)}
+.sec-head p{max-width:46ch;color:var(--ink-2);margin:0}
+.soft{background:var(--bg-soft)}
+
+/* scoreboard */
+.board{display:grid;gap:10px}
+.row{display:grid;grid-template-columns:200px 1fr 120px;align-items:center;gap:18px;text-decoration:none}
+.row .name{font-family:"Arima",serif;font-size:21px}
+.row .name small{display:block;font-family:"Nunito Sans";font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+.track{height:46px;background:var(--chip);position:relative;overflow:hidden}
+.fill{height:100%;width:0;display:flex;align-items:center;justify-content:flex-end;padding-right:14px;font-weight:700;color:#141414;transition:width 1.1s cubic-bezier(.2,.8,.2,1)}
+.board.in .fill{width:var(--w)}
+.verdict{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:6px 10px;border:1.5px solid currentColor;text-align:center}
+.v-yes{color:var(--yes)} .v-maybe{color:var(--maybe)} .v-no{color:var(--no)}
+@media (max-width:700px){.row{grid-template-columns:1fr auto;gap:6px 12px}.row .track{grid-column:1/-1;grid-row:2}.row .name{font-size:18px}}
+
+/* format */
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.fgrid article{background:var(--card);padding:30px 26px}
+.fgrid .ico{width:44px;height:44px;margin-bottom:22px}
+.fgrid h3{font-size:26px;margin-bottom:12px}
+.fgrid p{font-size:15.5px;color:var(--ink-2);margin:0}
+.tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.1em;font-weight:700;margin-bottom:10px}
+@media (max-width:980px){.fgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:560px){.fgrid{grid-template-columns:1fr}}
+
+/* flavour sections */
+.flav{padding:0;border-top:1px solid var(--line)}
+.flav .inner{display:grid;grid-template-columns:minmax(300px,5fr) 7fr;min-height:620px}
+.swatch{position:relative;background:linear-gradient(150deg,var(--c1),var(--c2));color:#141414;padding:44px 40px;display:flex;flex-direction:column;justify-content:space-between;overflow:hidden}
+.swatch .num{font-family:"Arima",serif;font-size:15px;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.swatch h3{font-size:clamp(46px,5.4vw,76px);line-height:.95;position:relative;z-index:1}
+.swatch .sub{font-size:14px;margin-top:10px;font-weight:600;position:relative;z-index:1}
+.jelly{position:absolute;right:-60px;top:70px;width:300px;height:300px;border-radius:46% 54% 58% 42%/48% 44% 56% 52%;background:radial-gradient(circle at 32% 28%,rgba(255,255,255,.85),rgba(255,255,255,.18) 22%,transparent 40%),radial-gradient(circle at 60% 65%,var(--c2),var(--c1) 70%);box-shadow:inset -18px -24px 40px rgba(0,0,0,.12),0 30px 60px rgba(0,0,0,.12);animation:wobble 9s ease-in-out infinite}
+.jelly.two{width:130px;height:130px;right:auto;left:58%;top:auto;bottom:150px;animation-delay:-3s;opacity:.85}
+@keyframes wobble{0%,100%{border-radius:46% 54% 58% 42%/48% 44% 56% 52%;transform:rotate(0)}50%{border-radius:56% 44% 44% 56%/52% 58% 42% 48%;transform:rotate(8deg)}}
+.scorebox{display:flex;align-items:center;gap:18px;position:relative;z-index:1}
+.ring{--p:0;width:96px;height:96px;border-radius:50%;background:conic-gradient(#141414 calc(var(--p)*1%),rgba(20,20,20,.14) 0);display:grid;place-items:center;flex:none}
+.ring::before{content:"";position:absolute;width:80px;height:80px;border-radius:50%;background:color-mix(in srgb,var(--c1) 70%,#fff)}
+.ring b{position:relative;font-family:"Arima",serif;font-size:32px;font-weight:400;line-height:1}
+.ring b small{font-size:14px}
+.buy{font-size:13px;line-height:1.4}
+.buy b{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase}
+.buy span{font-family:"Arima",serif;font-size:24px}
+.body{padding:48px 48px 56px;background:var(--card)}
+.oneliner{font-family:"Arima",serif;font-size:clamp(25px,2.6vw,33px);line-height:1.22;margin-bottom:26px}
+.body p{color:var(--ink-2)}
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px}
+.box{border:1px solid var(--line);padding:20px 22px}
+.box h4{font-family:"Nunito Sans";font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.box h4::before{content:"";width:10px;height:10px;background:var(--c1);display:inline-block}
+.box.change h4::before{background:transparent;border:2px solid var(--c1)}
+.box ul{margin:0;padding-left:18px;font-size:15.5px;color:var(--ink-2)}
+.box li{margin-bottom:6px}
+.whofor{margin-top:16px;font-size:15px;padding:14px 18px;background:color-mix(in srgb,var(--c1) 16%,var(--card));border-left:4px solid var(--c1)}
+.whofor b{font-weight:700}
+.qlist{counter-reset:q;list-style:none;padding:0;margin:20px 0 0}
+.qlist li{counter-increment:q;padding:14px 0 14px 46px;border-top:1px solid var(--line);position:relative;color:var(--ink-2)}
+.qlist li::before{content:counter(q,decimal-leading-zero);position:absolute;left:0;top:13px;font-family:"Arima",serif;font-size:20px;color:var(--ink)}
+@media (max-width:900px){.flav .inner{grid-template-columns:1fr;min-height:0}.swatch{min-height:380px;padding:32px 24px}.body{padding:32px 20px 40px}.cols{grid-template-columns:1fr}.jelly{width:220px;height:220px;right:-50px;top:40px}}
+
+/* summary */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+@media (max-width:860px){.split{grid-template-columns:1fr;gap:32px}}
+.big-quote{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0}
+.big-quote div{background:var(--card);padding:28px}
+.big-quote q{font-family:"Arima",serif;font-size:clamp(24px,2.6vw,32px);line-height:1.2;display:block;margin-bottom:12px;quotes:"\201C" "\201D"}
+.big-quote small{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted)}
+@media (max-width:560px){.big-quote{grid-template-columns:1fr}}
+.beliefs{width:100%;border-collapse:collapse;font-size:15.5px;margin-top:10px}
+.beliefs th,.beliefs td{text-align:left;padding:14px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.beliefs th{font-size:12px;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);font-weight:700}
+.beliefs td:first-child{font-family:"Arima",serif;font-size:19px}
+.split>div,.qgroups>div,.lineup>div{min-width:0}
+@media (max-width:560px){.beliefs{font-size:14.5px}.beliefs th,.beliefs td{padding:12px 6px}.beliefs td:first-child{font-size:17px}
+  .hero .blobs i{transform:scale(.55);transform-origin:top right}.hero .blobs i:nth-child(2),.hero .blobs i:nth-child(3){display:none}}
+.pill{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1.5px solid currentColor;white-space:nowrap}
+
+.lineup{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.lane{border:1px solid var(--line);background:var(--card)}
+.lane header{padding:20px 22px;border-bottom:1px solid var(--line)}
+.lane header h3{font-size:30px}
+.lane header p{margin:4px 0 0;font-size:14px;color:var(--muted)}
+.lane ul{list-style:none;margin:0;padding:8px 0}
+.lane li{display:flex;gap:14px;align-items:flex-start;padding:12px 22px}
+.dot{width:26px;height:26px;border-radius:50%;flex:none;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:inset -3px -4px 6px rgba(0,0,0,.12);margin-top:2px}
+.lane li b{display:block;font-weight:700;font-size:15.5px}
+.lane li span{font-size:14.5px;color:var(--ink-2)}
+@media (max-width:900px){.lineup{grid-template-columns:1fr}}
+
+.qgroups{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.qgroups h3{font-size:28px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+@media (max-width:900px){.qgroups{grid-template-columns:1fr}}
+.need{margin-top:56px;background:#0b0b0b;color:#fff;padding:44px}
+.need h3{font-size:clamp(28px,3.4vw,40px);margin-bottom:24px;max-width:24ch}
+.need ol{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;list-style:none;padding:0;margin:0;counter-reset:n}
+.need li{counter-increment:n;border-top:1px solid rgba(255,255,255,.3);padding-top:16px;font-size:17px}
+.need li::before{content:counter(n);display:block;font-family:"Arima",serif;font-size:44px;line-height:1;margin-bottom:8px;background:linear-gradient(90deg,var(--grapefruit),var(--lemon));-webkit-background-clip:text;background-clip:text;color:transparent}
+@media (max-width:760px){.need{padding:28px 20px}.need ol{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding:40px 0 60px;font-size:14px;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+</style>
+</head>
+<body>
+
+<div class="topbar"><span>Internal</span> &nbsp;|&nbsp; Product development: jelly gels. Not for distribution.</div>
+
+<header class="site">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Veloforte, back to top"><b>Veloforte</b><small>Real Nutrition</small></a>
+    <nav class="jump" aria-label="Sections">
+      <a href="#scores">Scores</a><a href="#format">Format</a><a href="#flavours">Flavours</a><a href="#lineup">Line-up</a><a href="#questions">Questions</a>
+    </nav>
+    <button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle light and dark mode">Light / dark</button>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="hero">
+  <div class="blobs" aria-hidden="true">
+    <i style="width:380px;height:380px;right:-90px;top:-60px;background:radial-gradient(circle at 35% 30%,#fff7,transparent 40%),var(--grapefruit)"></i>
+    <i style="width:200px;height:200px;right:240px;top:160px;background:radial-gradient(circle at 35% 30%,#fff8,transparent 40%),var(--lemon)"></i>
+    <i style="width:120px;height:120px;right:120px;top:330px;background:radial-gradient(circle at 35% 30%,#fff8,transparent 40%),var(--mint)"></i>
+    <i style="width:90px;height:90px;right:400px;top:40px;background:radial-gradient(circle at 35% 30%,#fff8,transparent 40%),var(--orange)"></i>
+  </div>
+  <div class="wrap">
+    <div class="eyebrow">Taste test 01 &middot; November 2026</div>
+    <h1>Eight jelly gels. One honest palate.</h1>
+    <p class="lede">Ellen brought round the new jelly gels. I ate all eight, put half of one in the freezer overnight, folded another back into my jersey pocket, and scored each against one question: would I buy it with my own money?</p>
+    <div class="meta"><span>For Lara and the product team</span><span>Tasted by Gareth</span><span>Samples from Ellen</span><span>Dictated, then tidied and expanded</span></div>
+    <div class="stats">
+      <div><b>8</b><span>flavours tasted</span></div>
+      <div><b>6.6</b><span>average score out of 10</span></div>
+      <div><b>5 of 8</b><span>I'd buy (one only with more zing)</span></div>
+      <div><b>9/10</b><span>top score: Grapefruit</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SCOREBOARD -->
+<section id="scores" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The scoreboard</h2>
+      <p>Ranked by score. Citrus wins clearly, with lime the one exception. Lime and mint are the only two I wouldn't pay for.</p>
+    </div>
+    <div class="board" id="board">
+      <a class="row" href="#f4"><div class="name">Grapefruit<small>Sample 4</small></div><div class="track"><div class="fill" style="--w:90%;background:linear-gradient(90deg,var(--grapefruit-2),var(--grapefruit))">9</div></div><div class="verdict v-yes">Would buy</div></a>
+      <a class="row" href="#f1"><div class="name">Lemon &amp; Ginger 1<small>Sample 1</small></div><div class="track"><div class="fill" style="--w:80%;background:linear-gradient(90deg,var(--lg1),var(--lg1-2))">8</div></div><div class="verdict v-yes">Would buy</div></a>
+      <a class="row" href="#f5"><div class="name">Lemon<small>Sample 5</small></div><div class="track"><div class="fill" style="--w:80%;background:linear-gradient(90deg,var(--lemon-2),var(--lemon))">8</div></div><div class="verdict v-yes">Would buy</div></a>
+      <a class="row" href="#f7"><div class="name">Lemon &amp; Ginger 2<small>Sample 7</small></div><div class="track"><div class="fill" style="--w:80%;background:linear-gradient(90deg,var(--lg2),var(--lg2-2))">8</div></div><div class="verdict v-yes">Would buy</div></a>
+      <a class="row" href="#f2"><div class="name">Orange<small>Sample 2</small></div><div class="track"><div class="fill" style="--w:70%;background:linear-gradient(90deg,var(--orange-2),var(--orange))">7</div></div><div class="verdict v-yes">With more zing</div></a>
+      <a class="row" href="#f3"><div class="name">Vanilla<small>Sample 3</small></div><div class="track"><div class="fill" style="--w:50%;background:linear-gradient(90deg,var(--vanilla-2),var(--vanilla))">5</div></div><div class="verdict v-maybe">Maybe</div></a>
+      <a class="row" href="#f6"><div class="name">Lime<small>Sample 6</small></div><div class="track"><div class="fill" style="--w:40%;background:linear-gradient(90deg,var(--lime-2),var(--lime))">4</div></div><div class="verdict v-no">Wouldn't buy</div></a>
+      <a class="row" href="#f8"><div class="name">Mint<small>Sample 8</small></div><div class="track"><div class="fill" style="--w:40%;background:linear-gradient(90deg,var(--mint-2),var(--mint))">4</div></div><div class="verdict v-no">Wouldn't buy</div></a>
+    </div>
+  </div>
+</section>
+
+<!-- FORMAT -->
+<section id="format">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2>The format: half gel, half chew</h2>
+      <p>Before the flavours, the thing itself. It sits between a gel and a chew, and it fixes about half of what's wrong with chews.</p>
+    </div>
+    <div class="fgrid reveal">
+      <article>
+        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 26c0-9 6-16 14-16s14 7 14 16-6 10-14 10S8 35 8 26Z"/><path d="M16 22c1.5-3 4-4.5 7-4.5"/></svg>
+        <span class="tag v-yes">Works</span>
+        <h3>In the mouth</h3>
+        <p>Smooth and set, with more body than a standard gel. Same family as Maurten's thicker gel but with more texture, and never actually grainy. Think of a chew that's already gone soft in a hot back pocket: you skip the chewing and go straight to the bit where it melts. Easier to get down on the bike than chews.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="13" y="6" width="18" height="32" rx="3"/><path d="M13 22h18M17 16l5 6 5-6"/></svg>
+        <span class="tag v-yes">Works</span>
+        <h3>Half now, half later</h3>
+        <p>Take half, fold the wrapper over, put it back in your pocket. Try that with a normal gel and it leaks down your jersey. This is a real advantage you can show in five seconds of video, and it should be in the launch creative.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="13" y="6" width="18" height="24" rx="3"/><path d="M11 34c4 3 18 3 22 0"/><path d="M22 30v8"/></svg>
+        <span class="tag v-maybe">Half solved</span>
+        <h3>Getting it out</h3>
+        <p>With a tear-off tab, the first squeeze will be easy and most of the gel comes out with little effort. The last third needs a firm roll from the bottom, much firmer than a gel. That's two hands off the bars for a cyclist, or two hands working away mid-stride for a runner. Better than chews, not yet as easy as a gel.</p>
+      </article>
+      <article>
+        <svg class="ico" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 4v36M6 13l32 18M38 13 6 31"/><path d="m18 7 4 4 4-4M18 37l4-4 4 4"/></svg>
+        <span class="tag v-yes">Passed</span>
+        <h3>The freezer test</h3>
+        <p>Ellen's challenge. Half went in the freezer and I ate it the next morning. It didn't freeze solid. It stayed soft enough to squeeze and eat. Good news for winter rides and for anyone who leaves their fuel in a cold car overnight.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FLAVOURS -->
+<div id="flavours"></div>
+
+<!-- 1 -->
+<section class="flav" id="f1" style="--c1:var(--lg1);--c2:var(--lg1-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 01</div>
+      <div><h3>Lemon &amp; Ginger</h3><div class="sub">Version one of two</div></div>
+      <div class="scorebox"><div class="ring" style="--p:80"><b>8<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Yes</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">My favourite tea, turned into fuel. I'm biased, and I'll say so.</p>
+      <p>Lemon and ginger is one of my favourite flavour combinations, full stop. It's the tea I drink most, so this sample started ahead before I'd opened it. It earned the lead anyway. Bright lemon arrives first, then the ginger turns up a beat later as warmth, not burn. It tastes like Veloforte: punchy and natural, with nothing from the sweet shop.</p>
+      <p>This was the first sample, so it's also where I met the texture. It's thicker than a standard gel, in the same family as Maurten's, and smoother than I expected. I loved it. I think it will divide people: some will welcome it, others will be put off. That's a hunch. Prove me wrong.</p>
+      <div class="cols">
+        <div class="box"><h4>Keep</h4><ul><li>The lemon first, ginger second order</li><li>Ginger pitched as warmth, not heat</li><li>The natural flavour, nothing confected</li></ul></div>
+        <div class="box change"><h4>Decide</h4><ul><li>Nothing to fix in the flavour</li><li>Sample 7 tastes almost the same. Choose one, or push the other far enough apart to earn a place (see sample 7)</li></ul></div>
+      </div>
+      <div class="whofor"><b>Who it's for:</b> Zenzero fans and anyone who already drinks lemon and ginger. It's the obvious bridge from the bar range to the new format.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 -->
+<section class="flav" id="f2" style="--c1:var(--orange);--c2:var(--orange-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 02</div>
+      <div><h3>Orange</h3><div class="sub">Sweet, soft, a little mandarin</div></div>
+      <div class="scorebox"><div class="ring" style="--p:70"><b>7<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Yes, with more zing</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">Lovely and polite. Veloforte isn't famous for polite.</p>
+      <p>I like this flavour and the texture. It's sweet, with a mandarin quality rather than straight orange, and that's a good thing. Orange is loved almost everywhere. It tastes of summer and it's very hard to dislike, so this is a natural crowd pleaser and a safe first purchase.</p>
+      <p>The problem is volume. Next to Citro it whispers. Veloforte is known for punch, and this should taste as if someone has just grated zest over it. Turn up the zest and the acidity to Citro's level for a real kick, and keep the mandarin sweetness underneath to round it off.</p>
+      <div class="cols">
+        <div class="box"><h4>Keep</h4><ul><li>The mandarin sweetness</li><li>The texture</li><li>Its broad, crowd-pleasing appeal</li></ul></div>
+        <div class="box change"><h4>Change</h4><ul><li>More zest and more acidity, benchmarked against Citro</li><li>Re-taste side by side with Citro before sign-off</li></ul></div>
+      </div>
+      <div class="whofor"><b>Who it's for:</b> new customers and mixed packs. It's the flavour nobody rejects, once it has some bite.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 -->
+<section class="flav" id="f3" style="--c1:var(--vanilla);--c2:var(--vanilla-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 03</div>
+      <div><h3>Vanilla</h3><div class="sub">The neutral one</div></div>
+      <div class="scorebox"><div class="ring" style="--p:50"><b>5<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Maybe</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">I was ready to hate it. The texture changed my mind. The flavour didn't, quite.</p>
+      <p>The surprise of the tasting. This had the best texture of the eight: smoother, and much more like a true jelly than a set gel. Whatever is different about this base, find out what it is and take it into the other flavours.</p>
+      <p>The flavour was pure nostalgia: the pink and white Chewits I ate as a kid, sitting in the park with my grandmother. (That flavour has since been discontinued.) Subtle vanilla and a lot of sweetness. It's a lovely memory, but it's a sweet-shop flavour, a long way from the punchy, natural taste people expect from Veloforte. I can't see it as a hero on the shelf.</p>
+      <div class="cols">
+        <div class="box"><h4>Keep</h4><ul><li>The texture. Find out why it's smoother and use it across the range</li></ul></div>
+        <div class="box change"><h4>Change</h4><ul><li>Drop it as a flavour, or</li><li>Reposition it as a plain, low-flavour option for long days when every other flavour gets too much</li></ul></div>
+      </div>
+      <div class="whofor"><b>Who it's for:</b> possibly ultra runners and long-distance riders who get tired of fruit flavours. Test before committing.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 -->
+<section class="flav" id="f4" style="--c1:var(--grapefruit);--c2:var(--grapefruit-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 04 &middot; Favourite</div>
+      <div><h3>Grapefruit</h3><div class="sub">The star of the tasting</div></div>
+      <div class="scorebox"><div class="ring" style="--p:90"><b>9<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Yes</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">My favourite of the eight, and the best case for a new flavour in the range.</p>
+      <p>Sweet, sharp and zingy, with the slightly bitter edge that makes grapefruit taste grown-up. The texture was great. It tastes fresh in a way I'd still want two hours into a ride.</p>
+      <p>The bigger opportunity is the pack. Pink grapefruit is a beautiful fruit: blush-pink flesh, sunny rind. On a shelf or in a feed it would stop the scroll. The palette leans feminine, which could make it especially attractive to women who run, an audience many endurance brands still treat as an afterthought. That gives people a reason to buy before they've tasted it.</p>
+      <div class="cols">
+        <div class="box"><h4>Keep</h4><ul><li>All of it: flavour, sweetness, zing, texture</li></ul></div>
+        <div class="box change"><h4>Build on</h4><ul><li>Design the pack around the fruit's colours</li><li>Make it the hero of the launch creative</li><li>Seed it with women's running clubs and creators</li></ul></div>
+      </div>
+      <div class="whofor"><b>Who it's for:</b> runners, especially women's running communities, and anyone bored of orange and lemon.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 5 -->
+<section class="flav" id="f5" style="--c1:var(--lemon);--c2:var(--lemon-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 05</div>
+      <div><h3>Lemon</h3><div class="sub">Solid, and a strategy question</div></div>
+      <div class="scorebox"><div class="ring" style="--p:80"><b>8<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Yes</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">A crowd pleaser that raises the hardest commercial question of the eight.</p>
+      <p>A clean, bright lemon with great texture. There's nothing to fix in how it eats. The question is what it does to the range. There are already lemon chews and a lemon gel. A lemon jelly gel would make three. At what point does that stop growing the basket and start splitting it? Would I pick the lemon gel or the lemon jelly gel, or take both?</p>
+      <p>It's a good flavour. What I'd like to see is the data-backed reason for the flavour choices.</p>
+      <ol class="qlist">
+        <li>Does it raise average order value, or swap one lemon product for another?</li>
+        <li>Does it encourage repeat purchase?</li>
+        <li>Does it get people exploring the range, or keep them inside lemon?</li>
+        <li>How many current orders already contain both lemon gels and lemon chews? If that share is high, lemon is a flavour people stay loyal to across formats, and a third format extends it. If it's low, expect substitution.</li>
+      </ol>
+      <div class="whofor"><b>Who it's for:</b> existing lemon loyalists. Whether that's enough depends on the answers above.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 -->
+<section class="flav" id="f6" style="--c1:var(--lime);--c2:var(--lime-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 06</div>
+      <div><h3>Lime</h3><div class="sub">Pleasant, and outclassed</div></div>
+      <div class="scorebox"><div class="ring" style="--p:40"><b>4<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>No</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">Nice enough. Not what I'd reach for when I'm working hard.</p>
+      <p>There's nothing wrong with it. But lime is greener and more bitter, closer to a cocktail than refreshment. Mid-effort, lemon and grapefruit both give the bright, sweet-sour hit you actually want. Lime sits between them and doesn't beat either.</p>
+      <div class="cols">
+        <div class="box"><h4>Keep</h4><ul><li>Nothing specific worth carrying over</li></ul></div>
+        <div class="box change"><h4>Change</h4><ul><li>Leave it out of the launch line-up</li><li>Put the development time into grapefruit and lemon</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7 -->
+<section class="flav" id="f7" style="--c1:var(--lg2);--c2:var(--lg2-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 07</div>
+      <div><h3>Lemon &amp; Ginger</h3><div class="sub">Version two of two</div></div>
+      <div class="scorebox"><div class="ring" style="--p:80"><b>8<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>Yes</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">Really good, and too close to version one to tell apart.</p>
+      <p>I struggled to tell this from sample 1. If I can't taste the difference, customers won't either, and two near-identical flavours just compete for the same shelf space. There are two clean ways forward.</p>
+      <div class="cols">
+        <div class="box"><h4>Option A</h4><ul><li>Run a blind side-by-side with a wider panel</li><li>Launch the winner, drop the other</li></ul></div>
+        <div class="box change"><h4>Option B</h4><ul><li>Push this one much further on ginger heat</li><li>Sell a gentle version and a fiery version as clearly different products</li></ul></div>
+      </div>
+      <div class="whofor"><b>My lean:</b> option A for launch. Keep the fiery idea for a later limited run if lemon and ginger sells.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 -->
+<section class="flav" id="f8" style="--c1:var(--mint);--c2:var(--mint-2)">
+  <div class="inner">
+    <div class="swatch">
+      <div class="jelly" aria-hidden="true"></div><div class="jelly two" aria-hidden="true"></div>
+      <div class="num">Sample 08</div>
+      <div><h3>Mint</h3><div class="sub">Proven elsewhere, unproven here</div></div>
+      <div class="scorebox"><div class="ring" style="--p:40"><b>4<small>/10</small></b></div><div class="buy"><b>Would I buy it?</b><span>No</span></div></div>
+    </div>
+    <div class="body reveal">
+      <p class="oneliner">Nice, and there's proof mint can sell. I'm not convinced it's a Veloforte flavour.</p>
+      <p>Mint has real history in endurance food. Kendal Mint Cake has gone up mountains for more than a century, including on the 1953 Everest expedition, and Kendal Mint Co. has built a loyal following among fell runners, ultra runners and hikers with mint energy products. So the demand exists.</p>
+      <p>I'd still say no for launch, for three reasons. A big hit of mint feels odd to a lot of people when they're breathing hard, and it lingers into whatever you eat or drink next. It doesn't fit Veloforte's flavour story of fruit, nuts, citrus and spice. And in the UK, mint fuel already has an owner. Launching against Kendal means arriving second.</p>
+      <div class="cols">
+        <div class="box"><h4>Where it could work</h4><ul><li>Hot climbs and long hill days, where cool and clean feels welcome</li><li>Ultra and hiking communities, where Kendal has already proved the appetite</li></ul></div>
+        <div class="box change"><h4>Before saying yes</h4><ul><li>Test with an ultra or fell panel, not a general one</li><li>Find a Veloforte angle on mint rather than a copy of Kendal's</li></ul></div>
+      </div>
+      <div class="whofor"><b>Who it's for:</b> ultra runners, fell runners and hikers. A niche product at best, not a core one.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SUMMARY -->
+<section id="summary" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>What it adds up to</h2><p>The format, the controversy and the test every Veloforte product has to pass.</p></div>
+    <div class="split reveal">
+      <div>
+        <h3 style="font-size:32px;margin-bottom:14px">Love it or hate it</h3>
+        <p>The texture will split people. Two reactions from the same kitchen:</p>
+        <div class="big-quote">
+          <div><q>Wow, this is nice.</q><small>Me</small></div>
+          <div><q>Oh my god, that looks f***ing disgusting.</q><small>Becky</small></div>
+        </div>
+        <p>I love that. Veloforte isn't a universal need. Everyone who trains needs fuel, but nobody needs Veloforte in particular. It's a nice-to-have, so being sensible and inoffensive won't win.</p>
+        <p>What can win is a product that gets people talking. Get the controversy right and you'll collect negative reactions, but just as many positive ones, and every reaction is a signal. The more people respond, the more the algorithms push you to new audiences. The conversation snowballs, and the love-or-hate question creates a curiosity gap: people try it to find out which side they're on.</p>
+        <p>To stand out you have to stand for something: rally a crowd of loyalists and accept that you'll divide the sceptics.</p>
+      </div>
+      <div>
+        <h3 style="font-size:32px;margin-bottom:14px">The Veloforte test</h3>
+        <p>Every Veloforte product has to deliver on four beliefs. If it doesn't, frankly, it isn't a Veloforte product. Here's where the jelly gel stands after one tasting.</p>
+        <table class="beliefs">
+          <thead><tr><th>Belief</th><th>Status</th><th>Notes</th></tr></thead>
+          <tbody>
+            <tr><td>Texture</td><td><span class="pill v-yes">Strong</span></td><td>Distinctive and divisive. Use vanilla's smoother base everywhere.</td></tr>
+            <tr><td>Flavour</td><td><span class="pill v-yes">Strong</span></td><td>Four or five flavours are launch-ready. Orange needs more punch.</td></tr>
+            <tr><td>Natural and easy to digest</td><td><span class="pill v-maybe">Unknown</span></td><td>Not testable at a kitchen table. Needs the ingredient list and field testing on long efforts.</td></tr>
+            <tr><td>Performance</td><td><span class="pill v-maybe">Unknown</span></td><td>Carbs per serving and how it compares with gels and chews at race pace.</td></tr>
+          </tbody>
+        </table>
+        <h3 style="font-size:26px;margin:34px 0 10px">The format, in one line</h3>
+        <p>It solves half the chew problem. Easy first squeeze, easy half-and-pocket, but scraping out the last third still takes a two-handed roll. A real improvement, not finished yet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINE-UP -->
+<section id="lineup">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Recommended line-up</h2><p>Based on one palate. Validate with a wider panel and your sales data before you lock it.</p></div>
+    <div class="lineup reveal">
+      <div class="lane">
+        <header><h3>Launch</h3><p>Ready, or close</p></header>
+        <ul>
+          <li><i class="dot" style="--c1:var(--grapefruit);--c2:var(--grapefruit-2)"></i><div><b>Grapefruit</b><span>The hero. Lead the pack design and the launch with it.</span></div></li>
+          <li><i class="dot" style="--c1:var(--lg1);--c2:var(--lg1-2)"></i><div><b>Lemon &amp; Ginger</b><span>One version only, chosen blind.</span></div></li>
+          <li><i class="dot" style="--c1:var(--orange);--c2:var(--orange-2)"></i><div><b>Orange</b><span>After re-zesting to Citro's level.</span></div></li>
+          <li><i class="dot" style="--c1:var(--lemon);--c2:var(--lemon-2)"></i><div><b>Lemon</b><span>If the basket data says it adds rather than swaps.</span></div></li>
+        </ul>
+      </div>
+      <div class="lane">
+        <header><h3>Rework</h3><p>Keep the good part</p></header>
+        <ul>
+          <li><i class="dot" style="--c1:var(--vanilla);--c2:var(--vanilla-2)"></i><div><b>Vanilla</b><span>Take its texture into every flavour. Revisit as a plain, low-flavour option.</span></div></li>
+          <li><i class="dot" style="--c1:var(--lg2);--c2:var(--lg2-2)"></i><div><b>Lemon &amp; Ginger 2</b><span>Only as a much hotter, clearly different version, later.</span></div></li>
+        </ul>
+      </div>
+      <div class="lane">
+        <header><h3>Cut for now</h3><p>Not launch flavours</p></header>
+        <ul>
+          <li><i class="dot" style="--c1:var(--lime);--c2:var(--lime-2)"></i><div><b>Lime</b><span>Lemon and grapefruit do the job better.</span></div></li>
+          <li><i class="dot" style="--c1:var(--mint);--c2:var(--mint-2)"></i><div><b>Mint</b><span>Unless an ultra or fell panel proves me wrong.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUESTIONS -->
+<section id="questions" class="soft">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Questions for Lara and the team</h2><p>I can build a proper go-to-market plan, but it should rest on evidence, not on my palate.</p></div>
+    <div class="qgroups reveal">
+      <div>
+        <h3>Product and customer</h3>
+        <ol class="qlist">
+          <li>What problem does this solve for the customer, or is it a test-and-learn? What gap in the market does it fill?</li>
+          <li>Who is it for: runners, cyclists, or both?</li>
+          <li>What switches people on to it, and what switches them off?</li>
+          <li>What data or customer feedback supports it so far?</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Competition</h3>
+        <ol class="qlist">
+          <li>How similar is it to Maurten's offer?</li>
+          <li>Using Maurten as the reference point, what are the differences that matter?</li>
+          <li>Where do texture, Veloforte flavour and digestibility together give us something Maurten can't claim?</li>
+        </ol>
+      </div>
+      <div>
+        <h3>Go-to-market</h3>
+        <ol class="qlist">
+          <li>How sophisticated is this market, and what does that mean for how we pitch it?</li>
+          <li>How does it become a desirable or deliberately controversial part of the line-up?</li>
+          <li>Who are the key people to seed it with, and how do we get social proof in front of buyers quickly?</li>
+          <li>Any other thoughts the team has on launch.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="need reveal">
+      <h3>To build an evidence-backed plan, I need to know three things about the audience</h3>
+      <ol>
+        <li>What resonates with the Veloforte audience today</li>
+        <li>What divides them</li>
+        <li>What they have rejected</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Jelly gel taste test 01. Notes dictated with Wispr Flow, then tidied and expanded.</span>
+    <span>Scores reflect one taster. Validate with a panel.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var root=document.documentElement, btn=document.getElementById('themeBtn');
+  try{var s=localStorage.getItem('jg-theme'); if(s) root.setAttribute('data-theme',s);}catch(e){}
+  btn.addEventListener('click',function(){
+    var cur=root.getAttribute('data-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+    var next=cur==='dark'?'light':'dark'; root.setAttribute('data-theme',next);
+    try{localStorage.setItem('jg-theme',next);}catch(e){}
+  });
+  var els=[].slice.call(document.querySelectorAll('.reveal, #board'));
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
